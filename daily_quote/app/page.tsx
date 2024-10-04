@@ -1,5 +1,6 @@
 "use client"
 
+import { Quote } from '@/components/quote';
 import { useState, useEffect } from 'react'; // Import necessary hooks
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
   return (
     <>
       {/* <h1>Daily Motivational Quote</h1> */}
-      <p>{quote}</p> {/* Display the fetched quote */}
+      <Quote />
     </>
   );
 }

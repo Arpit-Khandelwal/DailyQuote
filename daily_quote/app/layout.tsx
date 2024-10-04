@@ -2,6 +2,21 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
+import { Caudex } from 'next/font/google'
+import { Cormorant_Garamond } from 'next/font/google'
+
+const getCaudex = Caudex({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: "400"
+})
+
+const getCormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: "400"
+})
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -26,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${getCormorant.className} ${getCaudex.className} antialiased`}
       >
         {children}
       </body>
