@@ -1,17 +1,5 @@
-export default function MainQuote({ quote, author }: { quote: string; author: string }) {
-    return (
-        <blockquote className="relative max-w-2xl text-2xl font-medium italic sm:text-3xl md:text-4xl">
-            <div className="absolute -left-6 -top-6 h-12 w-12 rounded-full bg-primary/20 text-primary">
-                <QuoteIcon className="h-full w-full p-2" />
-            </div>
-            <p>
-               {quote}
-            </p>
-            <cite className="mt-4 block text-base not-italic text-muted-foreground">- {author}</cite>
-        </blockquote>
-    )
-}
-function QuoteIcon(props) {
+
+function QuoteIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg
             {...props}
